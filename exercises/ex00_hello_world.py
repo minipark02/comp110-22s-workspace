@@ -2,4 +2,5 @@
 
 __author__ = 730388033
 
+print("Hello, world.")
 print("Hello, world. It's me.")
