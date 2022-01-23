@@ -36,11 +36,15 @@ if match == 0:
 else:
     if match == 1:
         print("1 instance of " + char + " found in " + word)
+    else:
         if match == 2:
             print("2 instances of " + char + " found in " + word)
+        else:
             if match == 3:
                 print("3 instances of " + char + " found in " + word)
+            else:
                 if match == 4:
                     print("4 instances of " + char + " found in " + word)
+                else:
                     if match == 5:
                         print("5 instances of " + char + " found in " + word)
