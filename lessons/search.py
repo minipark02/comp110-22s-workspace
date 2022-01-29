@@ -1,4 +1,4 @@
-"""Classic ordered searching algorithm"""
+"""Classic ordered searching algorithm."""
 
 low: int = 1
 high: int = 100
