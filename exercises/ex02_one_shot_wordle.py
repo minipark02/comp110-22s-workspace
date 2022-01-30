@@ -2,41 +2,41 @@
 
 __author__ = "730388033"
 
-SECRET: str = "python"
+secret: str = "python"
 
 guess: str = input("What is your 6-letter guess? ")
 
-while len(guess) < len(SECRET):
+while len(guess) < len(secret) or len(guess) > len(secret):
     guess: str = input("That was not 6 letters! Try again: ")
-    if len(guess) > len(SECRET):
-        guess: str = input("That was not 6 letters! Try again: ")
 
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
 
-guess_index: str = guess[0]
+guess_index: int = 0
 emoji_guess: str = ""
+possible_character: bool = False
+alternative_index: int = 0
 
-while guess_index < SECRET[len(SECRET) - 1]:
-    if guess_index == SECRET[0]:
-        emoji_guess += GREEN_BOX
-    elif guess_index == SECRET[1]:
-        emoji_guess += GREEN_BOX
-    elif guess_index == SECRET[2]:
-        emoji_guess += GREEN_BOX
-    elif guess_index == SECRET[3]:
-        emoji_guess += GREEN_BOX
-    elif guess_index == SECRET[4]:
-        emoji_guess += GREEN_BOX
-    elif guess_index == SECRET[5]:
+while guess_index < len(secret):
+    if guess[guess_index] == secret[guess_index]:
         emoji_guess += GREEN_BOX
     else:
-        emoji_guess += WHITE_BOX
-    guess_index: str = guess[0 + 1]   
+        while possible_character is not True and alternative_index < len(secret):
+            if guess[guess_index] == secret[alternative_index]:
+                possible_character = True
+            else:
+                alternative_index += 1
+        if possible_character is True:
+            emoji_guess += YELLOW_BOX
+        else:
+            emoji_guess += WHITE_BOX
+    guess_index += 1
+    possible_character = False
+    alternative_index = 0
 print(emoji_guess)
 
-if guess != SECRET:
+if guess != secret:
     print("Not quite. Play again soon!")
-elif guess == SECRET:
+elif guess == secret:
     print("Woo! You got it!")
