@@ -44,4 +44,12 @@ schools = {"UNC": 19400, "Dukie": 6717, "NCSU": 26150}
 print(schools)
 
 # What happens when a key does not exist?
-print(schools["UNCC"])
+# print(schools["UNCC"])
+
+# Example of looping over the keys in a dict
+for key in schools:
+    print(f"Key: {key} -> Value: {schools[key]}")
+
+
+for school in schools:
+    print(f"Key: {school} -> Value: {schools[school]}")
