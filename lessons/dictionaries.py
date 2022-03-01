@@ -48,8 +48,10 @@ print(schools)
 
 # Example of looping over the keys in a dict
 for key in schools:
+    print(key)
     print(f"Key: {key} -> Value: {schools[key]}")
-
+    # Access values by giving their key in subscription notation
+    print(schools[key])
 
 for school in schools:
     print(f"Key: {school} -> Value: {schools[school]}")
