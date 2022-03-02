@@ -28,12 +28,6 @@ def favourite_colour(initial_dict: dict[str, str]) -> str:
             number = colour_dict[key]
             favourite = key
     return favourite
-    
-
-def main() -> None:
-    """Start of fave colour."""
-    colour_dict = {"Marc": "yellow", "Ezri": "blue", "Kris": "blue"}
-    print(favourite_colour(colour_dict))
 
 
 def count(a_list: list[str]) -> dict[str, int]:
@@ -45,7 +39,3 @@ def count(a_list: list[str]) -> dict[str, int]:
         else:
             count_dict[item] = 1
     return count_dict
-
-
-if __name__ == "__main__":
-    main()
