@@ -17,18 +17,17 @@ def favourite_colour(initial_dict: dict[str, str]) -> str:
     """Given a dict of names and favourite colours, it returns the most frequent colour."""
     colour_dict: dict[str, int] = dict()
     for key in initial_dict:
-        # colour_dict[initial_dict[key]] = key
-        # for colour in colour_dict:
-        #     if colour in colour_dict:
-        #         colour_dict[colour] += 1
-        #     else:
-        #         colour_dict[colour] = 1
-        colour = initial_dict[key]
-        if colour in colour_dict:
-            colour_dict[colour] += 1
+        if initial_dict[key] in colour_dict:
+            colour_dict[initial_dict[key]] += 1
         else:
-            colour_dict[colour] = 1
-    return max(colour_dict)
+            colour_dict[initial_dict[key]] = 1
+    favourite: str = ""
+    number: int = 0
+    for key in colour_dict:
+        if colour_dict[key] > number:
+            number = colour_dict[key]
+            favourite = key
+    return favourite
     
 
 def main() -> None:
