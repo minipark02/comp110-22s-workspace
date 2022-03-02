@@ -33,8 +33,8 @@ def test_single_colour() -> None:
 
 
 def test_same_favourite_colour() -> None:
-    """Everyone has the same favourite colour execpt two people."""
-    initial_dict = {'mercedes': 'sage green', 'angela': 'sage green', 'jewell': 'sage green', 'andres': 'purple', 'jessica': 'blue'}
+    """Everyone has the same favourite colour."""
+    initial_dict = {'mercedes': 'sage green', 'angela': 'sage green', 'jewell': 'sage green'}
     assert favourite_colour(initial_dict) == "sage green"
 
 
