@@ -13,7 +13,7 @@ def invert(a_dict: dict[str, str]) -> dict[str, str]:
     return inverted_dict
 
 
-def favourite_colour(initial_dict: dict[str, str]) -> str:
+def favorite_color(initial_dict: dict[str, str]) -> str:
     """Given a dict of names and favourite colours, it returns the most frequent colour."""
     colour_dict: dict[str, int] = dict()
     for key in initial_dict:

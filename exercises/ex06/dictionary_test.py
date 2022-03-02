@@ -3,7 +3,7 @@
 __author__ = "730388033"
 
 
-from exercises.ex06.dictionary import invert, favorite_colour, count
+from exercises.ex06.dictionary import invert, favorite_color, count
 import pytest
 
 
@@ -29,19 +29,19 @@ def test_two_keys() -> None:
 def test_single_colour() -> None:
     """Tests to see if a single colour is reported back."""
     initial_dict = {'mercedes': 'sage green'}
-    assert favorite_colour(initial_dict) == "sage green"
+    assert favorite_color(initial_dict) == "sage green"
 
 
 def test_same_favourite_colour() -> None:
     """Everyone has the same favourite colour."""
     initial_dict = {'mercedes': 'sage green', 'angela': 'sage green', 'jewell': 'sage green'}
-    assert favorite_colour(initial_dict) == "sage green"
+    assert favorite_color(initial_dict) == "sage green"
 
 
 def test_tie_colour() -> None:
     """Tie for two fave colours, returns the first one reported."""
     initial_dict = {'esther': 'yellow', 'mercedes': 'blue', 'michelle': 'blue', 'james': 'yellow'}
-    assert favorite_colour(initial_dict) == "yellow"
+    assert favorite_color(initial_dict) == "yellow"
 
 
 def test_one_char() -> None:
