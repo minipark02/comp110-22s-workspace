@@ -92,9 +92,12 @@ def count(data: list[str]) -> dict[str, int]:
 
 
 def average(data: dict[str, int]) -> float:
+    """Takes the average of the participant's responses."""
     result: float = 0.0
+    people: int = 0
     for key in data:
-        result += data[key]
-    result /= len(data)
-
+        product: int = int(key) * data[key]
+        result += product
+        people += data[key]
+    result /= people
     return result
